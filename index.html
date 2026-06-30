@@ -532,7 +532,7 @@ img { max-width: 100%; display: block; }
     <h2 class="section-title">Foto, video, <em>guida pratica</em></h2>
     <div class="media-grid">
       <div>
-        <p class="section-body">Inquadra il QR code con la fotocamera dello smartphone per accedere alla cartella con foto in alta risoluzione, video delle case, mappa dei sentieri e guida di benvenuto.</p>
+        <p class="section-body">Inquadra il QR code con la fotocamera dello smartphone per aprire la galleria multimediale: foto degli ambienti e del paesaggio, mappa dei sentieri e guida di benvenuto, tutto sfogliabile direttamente dal telefono.</p>
         <p class="media-text-meta">Stampabile · da lasciare in casa · condivisibile</p>
       </div>
       <div class="qr-frame" id="qr"></div>
@@ -597,18 +597,20 @@ img { max-width: 100%; display: block; }
 </footer>
 
 <!-- ====================================================================
-     QR CODE — sostituisci DRIVE_URL con il link alla tua cartella
-     Google Drive condivisa pubblicamente.
+     QR CODE — genera un codice che porta alla pagina media.html del sito.
+     L'URL deve essere ASSOLUTO (il QR viene scansionato fuori contesto).
+     Se in futuro cambi dominio (es. dominio personalizzato .it), aggiorna
+     la variabile MEDIA_URL qui sotto e ricarica/sostituisci la stampa del QR.
      ==================================================================== -->
 <script src="js/qrcode.min.js"></script>
 <script>
 (function() {
-  // >>> CAMBIA QUESTO URL <<<
-  var DRIVE_URL = 'https://drive.google.com/drive/folders/INSERISCI-ID-CARTELLA-QUI';
+  // >>> URL DI DESTINAZIONE DEL QR <<<
+  var MEDIA_URL = 'https://lecasedel.github.io/mannaloro/media.html';
 
   try {
     var qr = qrcode(0, 'M');
-    qr.addData(DRIVE_URL);
+    qr.addData(MEDIA_URL);
     qr.make();
     document.getElementById('qr').innerHTML = qr.createSvgTag({ scalable: true, margin: 1 });
   } catch (e) {
