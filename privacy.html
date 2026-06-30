@@ -16,7 +16,7 @@
   --paper: #FAF7F0;
   --ink: #1F2A1A;
   --ink-soft: #4A5544;
-  --terracotta: #B85F38;
+  --terracotta: #A14F2D;
   --moss: #5C6B47;
   --rule: #C9C0AE;
 }
@@ -31,6 +31,28 @@ body {
 }
 a { color: inherit; }
 .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--ink);
+  color: #F4EFE6;
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--terracotta);
+  outline-offset: -2px;
+}
 
 .site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 .site-header .wrap { max-width: 1080px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -159,17 +181,18 @@ ul li { margin-bottom: 0.4rem; }
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Salta al contenuto principale</a>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <img src="images/logo.svg" alt="Le Case del Mannaloro">
+    <a class="brand" href="index.html" aria-label="Le Case del Mannaloro — Torna alla pagina iniziale">
+      <img src="images/logo.svg" alt="">
     </a>
     <a class="back-link" href="index.html">← Torna al sito</a>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <div class="wrap">
     <div class="doc-eyebrow">Documento legale</div>
     <h1 class="doc-title">Informativa <em>privacy</em></h1>
@@ -251,6 +274,8 @@ ul li { margin-bottom: 0.4rem; }
     </div>
   </div>
 </footer>
+
+<script src="js/a11y.js" defer></script>
 
 </body>
 </html>

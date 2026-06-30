@@ -22,7 +22,7 @@
   --paper: #FAF7F0;
   --ink: #1F2A1A;
   --ink-soft: #4A5544;
-  --terracotta: #B85F38;
+  --terracotta: #A14F2D;
   --moss: #5C6B47;
   --rule: #C9C0AE;
   --stone: #E5DDCD;
@@ -44,6 +44,28 @@ img { max-width: 100%; display: block; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
 
 /* ===== Header ===== */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--ink);
+  color: #F4EFE6;
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--terracotta);
+  outline-offset: -2px;
+}
+
 .site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 .site-header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .brand {
@@ -437,13 +459,14 @@ img { max-width: 100%; display: block; }
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Salta al contenuto principale</a>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand">
-      <img src="images/logo.svg" alt="Le Case del Mannaloro">
+    <a href="index.html" class="brand" aria-label="Le Case del Mannaloro — Torna alla pagina iniziale">
+      <img src="images/logo.svg" alt="">
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Navigazione principale">
       <a href="#case">Le case</a>
       <a href="#esperienza">Esperienza</a>
       <a href="#media">Materiali</a>
@@ -452,7 +475,7 @@ img { max-width: 100%; display: block; }
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 
 <!-- ============================ HERO ============================ -->
 <section class="hero wrap">
@@ -609,6 +632,8 @@ img { max-width: 100%; display: block; }
      sostituire l'<svg> dentro <div class="qr-frame" id="qr"> sopra.
      URL ATTUALE PUNTATO: https://lecasedel.github.io/mannaloro/media.html
      ==================================================================== -->
+
+<script src="js/a11y.js" defer></script>
 
 </body>
 </html>
