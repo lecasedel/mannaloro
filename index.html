@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Le Case del Mannarolo — Madonie, Sicilia</title>
+<title>Le Case del Mannaloro — Madonie, Sicilia</title>
 <meta name="description" content="Architettura rurale, memoria, paesaggio. Soggiorni nel Parco delle Madonie, tra Pollina e Castelbuono.">
 
 <!-- ====================================================================
      PERSONALIZZA QUI I METADATI PER LA CONDIVISIONE SUI SOCIAL
      ==================================================================== -->
-<meta property="og:title" content="Le Case del Mannarolo — Madonie, Sicilia">
+<meta property="og:title" content="Le Case del Mannaloro — Madonie, Sicilia">
 <meta property="og:description" content="Architettura rurale, memoria, paesaggio. Soggiorni nel Parco delle Madonie, tra Pollina e Castelbuono.">
 <meta property="og:type" content="website">
 
@@ -44,14 +44,20 @@ img { max-width: 100%; display: block; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
 
 /* ===== Header ===== */
-.site-header { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
-.site-header .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .brand {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144;
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.005em;
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+.brand img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 560px) {
+  .brand img { height: 52px; }
 }
 .nav {
   display: flex;
@@ -434,7 +440,9 @@ img { max-width: 100%; display: block; }
 
 <header class="site-header">
   <div class="wrap">
-    <div class="brand">Le Case del Mannarolo</div>
+    <a href="index.html" class="brand">
+      <img src="images/logo.svg" alt="Le Case del Mannaloro">
+    </a>
     <nav class="nav">
       <a href="#case">Le case</a>
       <a href="#esperienza">Esperienza</a>
@@ -462,7 +470,7 @@ img { max-width: 100%; display: block; }
   <div class="eyebrow">Il luogo</div>
   <h2 class="section-title">Dove il bosco <em>profuma di manna</em></h2>
   <div class="section-body">
-    <p>[Paragrafo da personalizzare: la storia delle case e dei mannaroli, i raccoglitori che da secoli incidono i frassini di queste colline per estrarne la manna. Pollina e Castelbuono sono l'unica zona d'Europa dove questa tradizione sopravvive.]</p>
+    <p>[Paragrafo da personalizzare: la storia delle case e dei mannalori, i raccoglitori che da secoli incidono i frassini di queste colline per estrarne la manna. Pollina e Castelbuono sono l'unica zona d'Europa dove questa tradizione sopravvive.]</p>
     <p>[Secondo paragrafo: l'esperienza che proponi agli ospiti — silenzio, autenticità contadina, prossimità al mare di Cefalù e ai borghi medievali madoniti.]</p>
   </div>
 </section>
@@ -549,11 +557,11 @@ img { max-width: 100%; display: block; }
       </li>
       <li>
         <span class="contact-label">Email</span>
-        <span class="contact-value"><a href="mailto:lecasedelmannarolo@gmail.com">lecasedelmannarolo@gmail.com</a></span>
+        <span class="contact-value"><a href="mailto:lecasedelmannaloro@gmail.com">lecasedelmannaloro@gmail.com</a></span>
       </li>
       <li>
         <span class="contact-label">Instagram</span>
-        <span class="contact-value"><a href="https://www.instagram.com/lecasedelmannarolo" target="_blank" rel="noopener">@lecasedelmannarolo</a></span>
+        <span class="contact-value"><a href="https://www.instagram.com/lecasedelmannaloro" target="_blank" rel="noopener">@lecasedelmannaloro</a></span>
       </li>
     </ul>
   </div>
@@ -579,7 +587,7 @@ img { max-width: 100%; display: block; }
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-payoff">Architettura rurale · Memoria · Paesaggio</div>
-    <div>© Le Case del Mannarolo · Pollina · Madonie</div>
+    <div>© Le Case del Mannaloro · Pollina · Madonie</div>
     <div class="footer-links">
       <a href="privacy.html">Informativa privacy</a>
       <a href="cookie.html">Cookie policy</a>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Informativa privacy — Le Case del Mannaloro</title>
+<meta name="description" content="Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR).">
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link href="https://fonts.bunny.net/css2?family=Fraunces:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #F4EFE6;
+  --paper: #FAF7F0;
+  --ink: #1F2A1A;
+  --ink-soft: #4A5544;
+  --terracotta: #B85F38;
+  --moss: #5C6B47;
+  --rule: #C9C0AE;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+.site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.site-header .wrap { max-width: 1080px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.brand {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+.brand img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 560px) {
+  .brand img { height: 52px; }
+}
+.back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.back-link:hover { color: var(--ink); border-bottom-color: var(--terracotta); }
+
+main { padding: 4rem 0 5rem; }
+.doc-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+}
+.doc-eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+.doc-title {
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+.doc-title em { font-style: italic; color: var(--moss); }
+.doc-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--moss);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { color: var(--ink-soft); margin-bottom: 1rem; }
+p a { color: var(--ink); border-bottom: 1px solid var(--terracotta); text-decoration: none; padding-bottom: 1px; }
+p a:hover { color: var(--moss); }
+
+ul { padding-left: 1.25rem; margin-bottom: 1rem; color: var(--ink-soft); }
+ul li { margin-bottom: 0.4rem; }
+
+.data-table {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+.data-table dl { display: grid; grid-template-columns: 180px 1fr; gap: 0.75rem 1.5rem; }
+.data-table dt {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  padding-top: 2px;
+}
+.data-table dd { font-size: 16px; color: var(--ink); }
+@media (max-width: 560px) {
+  .data-table dl { grid-template-columns: 1fr; gap: 0.25rem 0; }
+  .data-table dt { margin-top: 0.5rem; }
+}
+
+.placeholder { color: #B85F38; background: #FAF7F0; padding: 2px 6px; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 14px; }
+
+.site-footer {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+.site-footer .wrap { max-width: 1080px; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.footer-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+.footer-links a:hover { color: var(--ink); border-bottom-color: var(--terracotta); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="Le Case del Mannaloro">
+    </a>
+    <a class="back-link" href="index.html">← Torna al sito</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="doc-eyebrow">Documento legale</div>
+    <h1 class="doc-title">Informativa <em>privacy</em></h1>
+    <p class="doc-meta">Ultimo aggiornamento: 27 giugno 2026</p>
+
+    <p>La presente informativa descrive le modalità con cui vengono trattati i dati personali degli utenti che consultano il sito <strong>casedelmannaloro</strong>, in conformità al Regolamento UE 2016/679 (GDPR) e al D.lgs. 196/2003 e successive modifiche.</p>
+
+    <h2>Titolare del trattamento</h2>
+    <div class="data-table">
+      <dl>
+        <dt>Nome e cognome</dt>
+        <dd><span class="placeholder">[DA COMPILARE]</span></dd>
+        <dt>Codice fiscale</dt>
+        <dd><span class="placeholder">[DA COMPILARE]</span></dd>
+        <dt>Indirizzo</dt>
+        <dd><span class="placeholder">[Contrada, CAP, Comune, Provincia]</span></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:lecasedelmannaloro@gmail.com">lecasedelmannaloro@gmail.com</a></dd>
+      </dl>
+    </div>
+
+    <h2>Tipologie di dati raccolti</h2>
+    <p>Il sito raccoglie le seguenti categorie di dati personali:</p>
+
+    <h3>Dati di navigazione</h3>
+    <p>I sistemi informatici e le procedure software preposte al funzionamento del sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet. Si tratta di informazioni che non sono raccolte per essere associate a interessati identificati, ma che per loro natura potrebbero, attraverso elaborazioni ed associazioni con dati detenuti da terzi, permettere di identificare gli utenti.</p>
+    <p>Rientrano in questa categoria gli indirizzi IP, i tipi di browser utilizzati, il sistema operativo, i nomi di dominio, gli orari di accesso e altri parametri tecnici relativi alla connessione. Tali dati sono gestiti dal provider di hosting (GitHub, vedi sotto) ai soli fini di sicurezza, statistiche aggregate e diagnosi tecnica.</p>
+
+    <h3>Dati forniti volontariamente dall'utente</h3>
+    <p>L'invio facoltativo di posta elettronica o di altre comunicazioni agli indirizzi di contatto indicati sul sito comporta la successiva acquisizione dei dati personali del mittente necessari per rispondere alle richieste (nome, indirizzo email, eventuali altri dati inclusi nella comunicazione).</p>
+
+    <h2>Finalità e base giuridica del trattamento</h2>
+    <ul>
+      <li><strong>Funzionamento tecnico del sito</strong>: legittimo interesse del titolare (art. 6.1.f GDPR) a garantire l'erogazione del servizio e la sua sicurezza.</li>
+      <li><strong>Risposta a richieste di informazioni o prenotazione</strong>: esecuzione di misure precontrattuali o contrattuali su richiesta dell'interessato (art. 6.1.b GDPR).</li>
+    </ul>
+
+    <h2>Modalità e luogo del trattamento</h2>
+    <p>I dati sono trattati con strumenti informatici e telematici, adottando misure di sicurezza appropriate volte a impedire accessi non autorizzati, divulgazione, modifica o distruzione non autorizzata dei dati. Il sito è ospitato su <strong>GitHub Pages</strong>, servizio fornito da GitHub, Inc., e i dati di navigazione possono essere processati su server situati negli Stati Uniti d'America, sulla base delle Clausole Contrattuali Standard adottate dalla Commissione Europea.</p>
+
+    <h2>Servizi di terze parti utilizzati</h2>
+
+    <h3>Hosting — GitHub Pages</h3>
+    <p>Fornitore: GitHub, Inc. (Stati Uniti). Finalità: erogazione del sito web. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">docs.github.com</a>.</p>
+
+    <h3>Caratteri tipografici — Bunny Fonts</h3>
+    <p>Fornitore: BunnyWay d.o.o. (Slovenia, UE). Finalità: fornitura dei caratteri tipografici utilizzati nella grafica del sito. Bunny Fonts dichiara una policy di "zero logging", non raccoglie né conserva alcun dato personale degli utenti, non utilizza cookie. Privacy policy: <a href="https://bunny.net/privacy" target="_blank" rel="noopener">bunny.net/privacy</a>.</p>
+
+    <h3>Google Drive (su attivazione dell'utente)</h3>
+    <p>Il sito espone un QR code che, se inquadrato dall'utente, conduce a una cartella pubblica ospitata su Google Drive contenente materiali multimediali. L'eventuale interazione dell'utente con tale cartella è soggetta alla privacy policy di Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>Periodo di conservazione</h2>
+    <p>I dati di navigazione tecnici sono conservati per il tempo strettamente necessario all'erogazione del servizio e in conformità con i tempi di retention del provider di hosting. I dati forniti tramite email sono conservati per il tempo necessario a evadere la richiesta dell'utente e, ove pertinente, per gli obblighi di legge connessi alla relazione contrattuale.</p>
+
+    <h2>Diritti dell'interessato</h2>
+    <p>Ai sensi degli artt. 15-22 del GDPR, l'interessato può in ogni momento esercitare i seguenti diritti, scrivendo all'indirizzo email del titolare:</p>
+    <ul>
+      <li>diritto di accesso ai propri dati personali;</li>
+      <li>diritto di rettifica di dati inesatti o incompleti;</li>
+      <li>diritto alla cancellazione ("diritto all'oblio");</li>
+      <li>diritto alla limitazione del trattamento;</li>
+      <li>diritto alla portabilità dei dati;</li>
+      <li>diritto di opposizione al trattamento;</li>
+      <li>diritto di revocare il consenso, ove applicabile.</li>
+    </ul>
+
+    <h2>Reclamo all'Autorità di controllo</h2>
+    <p>L'interessato che ritenga che il trattamento dei propri dati avvenga in violazione del GDPR ha il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (Piazza Venezia 11, 00187 Roma — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
+
+    <h2>Modifiche alla presente informativa</h2>
+    <p>Il titolare si riserva il diritto di apportare modifiche alla presente informativa in qualunque momento, dandone informazione agli utenti tramite pubblicazione sulla presente pagina. Si invita pertanto a consultare regolarmente questa sezione, con riferimento alla data di "ultimo aggiornamento" indicata in alto.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© Le Case del Mannaloro · Pollina · Madonie</div>
+    <div class="footer-links">
+      <a href="privacy.html">Informativa privacy</a>
+      <a href="cookie.html">Cookie policy</a>
+      <a href="finanziamento.html">Finanziamento</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
