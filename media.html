@@ -189,17 +189,33 @@ main { padding: 4rem 0 5rem; }
 }
 .docs-list a {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 1.1rem 0;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
   text-decoration: none;
   color: var(--ink);
   font-size: 17px;
   transition: color 0.15s;
 }
 .docs-list a:hover { color: var(--moss); }
+.docs-list .doc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
 .docs-list .doc-name {
   font-weight: 400;
+  font-size: 17px;
+  line-height: 1.3;
+}
+.docs-list .doc-author {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
 .docs-list .doc-meta-small {
   font-family: 'Inter', sans-serif;
@@ -207,6 +223,13 @@ main { padding: 4rem 0 5rem; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--terracotta);
+  flex-shrink: 0;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .docs-list a { flex-direction: column; gap: 0.5rem; }
+  .docs-list .doc-meta-small { padding-top: 0; }
 }
 
 /* === Lightbox === */
@@ -358,22 +381,41 @@ main { padding: 4rem 0 5rem; }
     </section>
 
     <!-- ====================================================================
-         SEZIONE: DOCUMENTI UTILI
+         SEZIONE: DOCUMENTI E APPROFONDIMENTI
          I PDF vanno caricati in media/documenti/.
-         Per ogni documento, sostituisci il messaggio "in arrivo" con un <li>:
-         <li><a href="media/documenti/guida-benvenuto.pdf" target="_blank" rel="noopener">
-           <span class="doc-name">Guida di benvenuto</span>
-           <span class="doc-meta-small">PDF · 2 MB</span>
-         </a></li>
+         Per aggiungere un nuovo documento, aggiungi un <li> alla lista appropriata
+         seguendo il pattern già presente.
          ==================================================================== -->
     <section class="media-section">
-      <div class="section-eyebrow">Guida pratica</div>
-      <h2 class="section-title">Documenti <em>utili</em></h2>
-      <p class="section-intro">Guida di benvenuto, mappa dei sentieri, numeri utili, informazioni sul Wi-Fi e il check-in.</p>
+      <div class="section-eyebrow">Documenti e approfondimenti</div>
+      <h2 class="section-title">Per saperne <em>di più</em></h2>
+      <p class="section-intro">Approfondimenti scientifici e culturali sulla tradizione della manna nelle Madonie, e la guida pratica al soggiorno.</p>
 
+      <h3 class="subsection-title">Approfondimenti sulla manna delle Madonie</h3>
+      <ul class="docs-list">
+        <li><a href="media/documenti/cornara-manna-madonie-2017.pdf" target="_blank" rel="noopener">
+          <div class="doc-info">
+            <span class="doc-name">La manna, il dono delle Madonie</span>
+            <span class="doc-author">Cornara L., Sanclemente G., Robustelli della Cuna F.S., Preda S., Raimondo F.M. — Erboristeria Domani n. 402, 2017</span>
+          </div>
+          <span class="doc-meta-small">PDF · IT · 3,7 MB</span>
+        </a></li>
+        <li><a href="media/documenti/spadaro-raimondo-manna-fraxinus-2022.pdf" target="_blank" rel="noopener">
+          <div class="doc-info">
+            <span class="doc-name">The "manna" extracted from the ash trees still cultivated in Sicily</span>
+            <span class="doc-author">Spadaro V., Raimondo F.M. — Archives of Food and Nutritional Science, 2022 (open access, CC-BY)</span>
+          </div>
+          <span class="doc-meta-small">PDF · EN · 830 KB</span>
+        </a></li>
+      </ul>
+
+      <h3 class="subsection-title">Guida al soggiorno</h3>
       <ul class="docs-list">
         <li><a href="#" style="cursor: default; color: var(--ink-soft);" onclick="event.preventDefault();">
-          <span class="doc-name">I documenti saranno disponibili a breve</span>
+          <div class="doc-info">
+            <span class="doc-name">Guida di benvenuto, Wi-Fi e numeri utili</span>
+            <span class="doc-author">Sarà disponibile a breve insieme alle informazioni pratiche per il soggiorno.</span>
+          </div>
           <span class="doc-meta-small">In preparazione</span>
         </a></li>
       </ul>
