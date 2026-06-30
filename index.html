@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Case del Mannarolo — Madonie, Sicilia</title>
+<meta name="description" content="Architettura rurale, memoria, paesaggio. Soggiorni nel Parco delle Madonie, tra Pollina e Castelbuono.">
+
+<!-- ====================================================================
+     PERSONALIZZA QUI I METADATI PER LA CONDIVISIONE SUI SOCIAL
+     ==================================================================== -->
+<meta property="og:title" content="Le Case del Mannarolo — Madonie, Sicilia">
+<meta property="og:description" content="Architettura rurale, memoria, paesaggio. Soggiorni nel Parco delle Madonie, tra Pollina e Castelbuono.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link href="https://fonts.bunny.net/css2?family=Fraunces:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #F4EFE6;
+  --paper: #FAF7F0;
+  --ink: #1F2A1A;
+  --ink-soft: #4A5544;
+  --terracotta: #B85F38;
+  --moss: #5C6B47;
+  --rule: #C9C0AE;
+  --stone: #E5DDCD;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 14;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ===== Header ===== */
+.site-header { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.brand {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+.nav {
+  display: flex;
+  gap: 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav a:hover { color: var(--ink); border-bottom-color: var(--terracotta); }
+@media (max-width: 560px) { .nav { gap: 1rem; font-size: 11px; } }
+
+/* ===== Hero ===== */
+.hero {
+  padding: 4.5rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+}
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+.eyebrow::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--terracotta);
+}
+.hero-title {
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(40px, 6.2vw, 78px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+.hero-title em, .section-title em {
+  font-style: italic;
+  color: var(--moss);
+}
+.hero-lede {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 36ch;
+}
+.hero-img {
+  aspect-ratio: 4/5;
+  background: var(--stone);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-img::after {
+  content: '[ FOTO PRINCIPALE ]';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+  opacity: 0.55;
+}
+.hero-img img,
+.cottage-img img,
+.location-map img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding: 3rem 0 2rem; gap: 2rem; }
+  .hero-img { aspect-ratio: 4/3; }
+}
+
+.payoff {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.payoff::before, .payoff::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--terracotta);
+  max-width: 40px;
+}
+
+/* ===== Sections ===== */
+.section { padding: 5rem 0; border-top: 1px solid var(--rule); }
+.section-title {
+  font-variation-settings: "opsz" 96;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  max-width: 22ch;
+}
+.section-body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+.section-body p + p { margin-top: 1.2rem; }
+
+/* ===== Cottages ===== */
+.cottages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+}
+.cottage { display: flex; flex-direction: column; }
+.cottage-img {
+  aspect-ratio: 4/5;
+  background: var(--stone);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
+  opacity: 0.65;
+}
+.cottage-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.5rem;
+}
+.cottage-name {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--moss);
+  margin-bottom: 0.6rem;
+}
+.cottage-desc {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .cottages-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ===== Experience ===== */
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem 3rem;
+  margin-top: 2.5rem;
+}
+.exp-item { border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+.exp-item h3 {
+  font-size: 21px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--moss);
+  margin-bottom: 0.6rem;
+}
+.exp-item p { font-size: 15.5px; line-height: 1.65; color: var(--ink-soft); }
+@media (max-width: 720px) { .experience-list { grid-template-columns: 1fr; } }
+
+/* ===== Media / QR ===== */
+.media-section {
+  background: var(--paper);
+  padding: 5rem 0;
+  margin-top: 0;
+  border-top: 1px solid var(--rule);
+}
+.media-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.media-text-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+.qr-frame {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  max-width: 280px;
+  margin-left: auto;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-frame svg { width: 100%; height: 100%; }
+@media (max-width: 720px) {
+  .media-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .qr-frame { margin: 0 auto; max-width: 220px; }
+}
+
+/* ===== Location / Contact ===== */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+.location-map {
+  aspect-ratio: 4/3;
+  background: var(--stone);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
+  opacity: 0.65;
+}
+.contact-list { list-style: none; }
+.contact-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: baseline;
+  gap: 1rem;
+}
+.contact-list li:last-child { border-bottom: none; }
+.contact-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.contact-value { font-size: 16.5px; color: var(--ink); }
+.contact-value a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 1px;
+}
+.contact-value a:hover { color: var(--moss); }
+@media (max-width: 720px) {
+  .location-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-list li { grid-template-columns: 1fr; gap: 4px; padding: 0.6rem 0 1rem; }
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+.funding {
+  padding: 3rem 0 3rem;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+}
+.funding-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.funding-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+.funding-logos img {
+  height: 56px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+.funding-disclosure {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+.funding-disclosure a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 1px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.funding-disclosure a:hover { color: var(--moss); }
+@media (max-width: 720px) {
+  .funding-logos { gap: 1.5rem; }
+  .funding-logos img { height: 44px; max-width: 160px; }
+}
+.site-footer .wrap { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.footer-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.footer-links a:hover { color: var(--ink); border-bottom-color: var(--terracotta); }
+.footer-payoff {
+  color: var(--terracotta);
+  letter-spacing: 0.22em;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">Le Case del Mannarolo</div>
+    <nav class="nav">
+      <a href="#case">Le case</a>
+      <a href="#esperienza">Esperienza</a>
+      <a href="#media">Materiali</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero wrap">
+  <div>
+    <div class="eyebrow">Madonie · Sicilia</div>
+    <h1 class="hero-title">Una <em>radura di pietra</em> tra Pollina e Castelbuono</h1>
+    <p class="hero-lede">Più case di campagna affacciate sui boschi di frassino del Parco delle Madonie, a un quarto d'ora dal mare e a un'ora da Palermo.</p>
+    <div class="payoff">Architettura rurale · Memoria · Paesaggio</div>
+  </div>
+  <div class="hero-img"></div>
+</section>
+
+<!-- ============================ IL LUOGO ============================ -->
+<section class="section wrap">
+  <div class="eyebrow">Il luogo</div>
+  <h2 class="section-title">Dove il bosco <em>profuma di manna</em></h2>
+  <div class="section-body">
+    <p>[Paragrafo da personalizzare: la storia delle case e dei mannaroli, i raccoglitori che da secoli incidono i frassini di queste colline per estrarne la manna. Pollina e Castelbuono sono l'unica zona d'Europa dove questa tradizione sopravvive.]</p>
+    <p>[Secondo paragrafo: l'esperienza che proponi agli ospiti — silenzio, autenticità contadina, prossimità al mare di Cefalù e ai borghi medievali madoniti.]</p>
+  </div>
+</section>
+
+<!-- ============================ LE CASE ============================ -->
+<section class="section wrap" id="case">
+  <div class="eyebrow">Le sistemazioni</div>
+  <h2 class="section-title">Le <em>case</em></h2>
+  <div class="cottages-grid">
+    <article class="cottage">
+      <div class="cottage-img">[ FOTO CASA 1 ]</div>
+      <div class="cottage-meta">Sistemazione · 01</div>
+      <h3 class="cottage-name">Nome casa 1</h3>
+      <p class="cottage-desc">Breve descrizione: posti letto, caratteristiche distintive, vista, atmosfera.</p>
+    </article>
+    <article class="cottage">
+      <div class="cottage-img">[ FOTO CASA 2 ]</div>
+      <div class="cottage-meta">Sistemazione · 02</div>
+      <h3 class="cottage-name">Nome casa 2</h3>
+      <p class="cottage-desc">Breve descrizione: posti letto, caratteristiche distintive, vista, atmosfera.</p>
+    </article>
+    <article class="cottage">
+      <div class="cottage-img">[ FOTO CASA 3 ]</div>
+      <div class="cottage-meta">Sistemazione · 03</div>
+      <h3 class="cottage-name">Nome casa 3</h3>
+      <p class="cottage-desc">Breve descrizione: posti letto, caratteristiche distintive, vista, atmosfera.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ ESPERIENZA ============================ -->
+<section class="section wrap" id="esperienza">
+  <div class="eyebrow">Cosa fare</div>
+  <h2 class="section-title">L'esperienza <em>delle Madonie</em></h2>
+  <div class="experience-list">
+    <div class="exp-item">
+      <h3>Sentieri e natura</h3>
+      <p>Trekking nel Parco delle Madonie, faggete millenarie, Piano Battaglia. Tutto a meno di trenta minuti di auto.</p>
+    </div>
+    <div class="exp-item">
+      <h3>Borghi medievali</h3>
+      <p>Castelbuono col castello dei Ventimiglia, Pollina arroccata sulla rupe, Geraci Siculo, Petralia Sottana.</p>
+    </div>
+    <div class="exp-item">
+      <h3>Il mare a un quarto d'ora</h3>
+      <p>Le spiagge di Finale di Pollina, Cefalù a venti minuti, calette tirreniche raggiungibili in poco tempo.</p>
+    </div>
+    <div class="exp-item">
+      <h3>Sapori del territorio</h3>
+      <p>Manna di Pollina, funghi di bosco, formaggi madoniti, pane di Castelbuono, vini dei Nebrodi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QR / MATERIALI ============================ -->
+<section class="media-section" id="media">
+  <div class="wrap">
+    <div class="eyebrow">Materiali multimediali</div>
+    <h2 class="section-title">Foto, video, <em>guida pratica</em></h2>
+    <div class="media-grid">
+      <div>
+        <p class="section-body">Inquadra il QR code con la fotocamera dello smartphone per accedere alla cartella con foto in alta risoluzione, video delle case, mappa dei sentieri e guida di benvenuto.</p>
+        <p class="media-text-meta">Stampabile · da lasciare in casa · condivisibile</p>
+      </div>
+      <div class="qr-frame" id="qr"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTATTI ============================ -->
+<section class="section wrap" id="contatti">
+  <div class="eyebrow">Dove siamo · come prenotare</div>
+  <h2 class="section-title">Per <em>raggiungerci</em></h2>
+  <div class="location-grid">
+    <div class="location-map">[ MAPPA O FOTO PANORAMICA ]</div>
+    <ul class="contact-list">
+      <li>
+        <span class="contact-label">Indirizzo</span>
+        <span class="contact-value">Contrada [...]<br>90010 Pollina (PA)</span>
+      </li>
+      <li>
+        <span class="contact-label">Telefono</span>
+        <span class="contact-value"><a href="tel:+39...">+39 ...</a></span>
+      </li>
+      <li>
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:lecasedelmannarolo@gmail.com">lecasedelmannarolo@gmail.com</a></span>
+      </li>
+      <li>
+        <span class="contact-label">Instagram</span>
+        <span class="contact-value"><a href="https://www.instagram.com/lecasedelmannarolo" target="_blank" rel="noopener">@lecasedelmannarolo</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<section class="funding">
+  <div class="wrap">
+    <div class="funding-eyebrow">Intervento finanziato dal PNRR</div>
+    <div class="funding-logos">
+      <img src="images/loghi/ue-nextgeneration.png" alt="Finanziato dall'Unione europea — NextGenerationEU">
+      <img src="images/loghi/italia-domani.png" alt="Italia Domani — Piano Nazionale di Ripresa e Resilienza">
+      <img src="images/loghi/mic.png" alt="Ministero della Cultura">
+      <img src="images/loghi/regione-siciliana.png" alt="Regione Siciliana">
+    </div>
+    <p class="funding-disclosure">
+      Intervento di restauro e valorizzazione finanziato dall'Unione europea – NextGenerationEU nell'ambito del PNRR Missione 1 Componente 3 – Investimento 2.2 "Protezione e valorizzazione dell'architettura e del paesaggio rurale". <a href="finanziamento.html">Dettagli del finanziamento →</a>
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-payoff">Architettura rurale · Memoria · Paesaggio</div>
+    <div>© Le Case del Mannarolo · Pollina · Madonie</div>
+    <div class="footer-links">
+      <a href="privacy.html">Informativa privacy</a>
+      <a href="cookie.html">Cookie policy</a>
+      <a href="finanziamento.html">Finanziamento</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================================================================
+     QR CODE — sostituisci DRIVE_URL con il link alla tua cartella
+     Google Drive condivisa pubblicamente.
+     ==================================================================== -->
+<script src="js/qrcode.min.js"></script>
+<script>
+(function() {
+  // >>> CAMBIA QUESTO URL <<<
+  var DRIVE_URL = 'https://drive.google.com/drive/folders/INSERISCI-ID-CARTELLA-QUI';
+
+  try {
+    var qr = qrcode(0, 'M');
+    qr.addData(DRIVE_URL);
+    qr.make();
+    document.getElementById('qr').innerHTML = qr.createSvgTag({ scalable: true, margin: 1 });
+  } catch (e) {
+    console.error('QR generation failed:', e);
+  }
+})();
+</script>
+
+</body>
+</html>
